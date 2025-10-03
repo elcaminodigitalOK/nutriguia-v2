@@ -102,9 +102,9 @@ export default function HomeScreen() {
           <View style={styles.logoContainer}>
             <Image source={Logo} style={[styles.logo, { width: 120, height: 120 }]} />
           </View>
-          <Text style={styles.headerTopText}>Comienza a Mejorar</Text>
           <Text style={styles.headerAppName}>NutriGuia</Text>
-          <Text style={styles.headerAppSubtitle}>Un camino hacia una vida mas sana</Text>
+          <Text style={styles.headerAppSubtitle}>Comienza un camino</Text>
+          <Text style={styles.headerAppSubtitle}>hacia una vida mas sana</Text>
         </View>
       </ImageBackground>
 
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
   },
   header: {
     paddingTop: Platform.OS === 'ios' ? 60 : 40,
-    paddingBottom: 0, // Increased padding to give space for stats
+    paddingBottom: 30,
     paddingHorizontal: 24,
     justifyContent: 'center',
     alignItems: 'center',
@@ -194,36 +194,31 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  headerTopText: {
-    color: '#00FF00',
-    textShadowColor: 'rgba(0, 0, 0, 0.75)',
-    textShadowOffset: {width: 0.5, height: 0.5},
-    textShadowRadius: 1,
-    marginBottom: 4,
-  },
   headerAppName: {
-    fontSize: 24,
+    fontSize: 28,
     fontWeight: 'bold',
     color: '#00FF00',
-    textShadowColor: 'rgba(0, 0, 0, 0.75)',
-    textShadowOffset: {width: 0.5, height: 0.5},
-    textShadowRadius: 1,
-    marginTop: 4,
-    marginBottom: 8,
+    textShadowColor: 'rgba(0, 0, 0, 1)',
+    textShadowOffset: {width: 1, height: 1},
+    textShadowRadius: 3,
+    marginTop: 8,
+    marginBottom: 12,
   },
   headerAppSubtitle: {
     fontSize: 16,
     color: '#00FF00',
-    textShadowColor: 'rgba(0, 0, 0, 0.75)',
-    textShadowOffset: {width: 0.5, height: 0.5},
-    textShadowRadius: 1,
+    textShadowColor: 'rgba(0, 0, 0, 1)',
+    textShadowOffset: {width: 1, height: 1},
+    textShadowRadius: 3,
     textAlign: 'center',
+    lineHeight: 22,
   },
   statsContainer: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    paddingHorizontal: 24, // Adjusted padding
+    paddingHorizontal: 24,
     marginBottom: 0,
+    marginTop: -25,
   },
   statCard: {
     alignItems: 'center',
@@ -246,9 +241,9 @@ const styles = StyleSheet.create({
   statLabel: {
     fontSize: 12,
     color: '#FFE81F',
-    textShadowColor: 'rgba(0, 0, 0, 0.75)',
-    textShadowOffset: {width: 0.5, height: 0.5},
-    textShadowRadius: 1,
+    textShadowColor: 'rgba(0, 0, 0, 1)',
+    textShadowOffset: {width: 1, height: 1},
+    textShadowRadius: 2,
     textAlign: 'center',
     fontWeight: 'bold',
   },
@@ -317,7 +312,7 @@ const styles = StyleSheet.create({
     height: 24,
   },
   separatorLine: {
-    height: 5,
+    height: 7,
     backgroundColor: '#FFE81F',
     width: '100%',
   },
